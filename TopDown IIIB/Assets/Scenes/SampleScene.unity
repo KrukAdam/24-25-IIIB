@@ -1094,6 +1094,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6440840397980631607, guid: efaa6c80438d4fe4dae92420cbf1ef05, type: 3}
+      propertyPath: misslePrefab
+      value: 
+      objectReference: {fileID: 2065403675122506379, guid: 1a538fa6cf98cd547ad922b53d9e5ce6, type: 3}
     - target: {fileID: 9156086977242578756, guid: efaa6c80438d4fe4dae92420cbf1ef05, type: 3}
       propertyPath: m_Name
       value: WhiteHero
