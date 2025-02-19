@@ -106,8 +106,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 4060582840313609519, guid: 4d083d537937b2944899a121c628ed2c, type: 3}
+  m_SortingOrder: 1000
+  m_Sprite: {fileID: 21300000, guid: f7eb00cb3ec9bab45b85d561558c4250, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 3430885796702595468}
   - component: {fileID: 8093877659337188503}
   - component: {fileID: 6440840397980631607}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WhiteHero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whiteHeroInputController: {fileID: 3453316968904947571}
+  rb: {fileID: 8093877659337188503}
   rotationSpeed: 5
   moveSpeed: 5
 --- !u!114 &3453316968904947571
@@ -218,8 +219,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.33
+  m_Offset: {x: 0.004186839, y: 0}
+  m_Radius: 0.35093406
 --- !u!50 &8093877659337188503
 Rigidbody2D:
   serializedVersion: 5
@@ -246,7 +247,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6440840397980631607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,5 +260,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e42d0d6470eac48ae573ff1d916461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  misslePrefab: {fileID: 7905658165342808802, guid: 1a538fa6cf98cd547ad922b53d9e5ce6, type: 3}
+  misslePrefab: {fileID: 2065403675122506379, guid: 1a538fa6cf98cd547ad922b53d9e5ce6, type: 3}
   spawnPoint: {fileID: 4640473287989754663}

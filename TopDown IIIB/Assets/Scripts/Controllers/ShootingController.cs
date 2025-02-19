@@ -16,7 +16,7 @@ namespace Controllers
             }
 
             var missle = Instantiate(misslePrefab, spawnPoint.position, spawnPoint.rotation);
-            missle.AllahAqba();
+            missle.Init();
         }
     }
 }

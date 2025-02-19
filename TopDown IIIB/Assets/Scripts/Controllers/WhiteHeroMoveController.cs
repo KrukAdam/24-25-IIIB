@@ -5,8 +5,11 @@ namespace Controllers
     public class WhiteHeroMoveController : MonoBehaviour
     {
         [SerializeField] private WhiteHeroInputController whiteHeroInputController;
+        [SerializeField] private Rigidbody2D rb; 
         [SerializeField] private float rotationSpeed = 5f; // Prêdkoœæ obracania obiektu
         [SerializeField] private float moveSpeed = 5f; // Prêdkoœæ poruszania siê obiektu
+        
+
 
         // Update is called once per frame
         void Update()
@@ -14,6 +17,7 @@ namespace Controllers
             Rotate();
             Move();
         }
+
 
         private void Rotate()
         {
@@ -34,9 +38,13 @@ namespace Controllers
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
             // Zrotuj obiekt w kierunku kursora
-            Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            Quaternion targetRotation = Quaternion.Euler(new Vector3(transform.rotation.x, transform.rotation.y, angle));
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+
         }
+
+
 
         private void Move()
         {
@@ -46,10 +54,10 @@ namespace Controllers
             float verticalInput = whiteHeroInputController.Vertical;
 
             // Oblicz kierunek ruchu
-            Vector3 movement = new Vector3(horizontalInput, verticalInput, 0).normalized;
+            Vector3 movement = new Vector3(horizontalInput, verticalInput, 0);
 
             // Porusz obiektem w zadanym kierunku
-            transform.position += movement * moveSpeed * Time.deltaTime;
+            rb.linearVelocity = movement * moveSpeed;
         }
     }
 }       
