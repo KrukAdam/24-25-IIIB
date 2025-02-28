@@ -8,7 +8,8 @@ namespace Controllers
         [SerializeField] private Rigidbody2D rb; 
         [SerializeField] private float rotationSpeed = 5f; // Prêdkoœæ obracania obiektu
         [SerializeField] private float moveSpeed = 5f; // Prêdkoœæ poruszania siê obiektu
-        
+        [SerializeField] private float boostSpeed = 7f;
+
 
 
         // Update is called once per frame
@@ -56,8 +57,9 @@ namespace Controllers
             // Oblicz kierunek ruchu
             Vector3 movement = new Vector3(horizontalInput, verticalInput, 0);
 
+            var speed = whiteHeroInputController.Boost ? boostSpeed : moveSpeed;
             // Porusz obiektem w zadanym kierunku
-            rb.linearVelocity = movement * moveSpeed;
+            rb.linearVelocity = movement * speed;
         }
     }
 }       

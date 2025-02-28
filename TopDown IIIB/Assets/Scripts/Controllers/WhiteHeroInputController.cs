@@ -10,6 +10,7 @@ namespace Controllers
         
         public float Horizontal { get; private set; }
         public float Vertical {get; private set; }
+        public bool Boost {get; private set; }
 
         [SerializeField] private ShootingController shootingController;
 
@@ -23,9 +24,10 @@ namespace Controllers
                 Debug.Log("Fire1 button pressed");
                 shootingController.Shoot();
             }
-
+            
             Horizontal = Input.GetAxis("Horizontal");
             Vertical = Input.GetAxis("Vertical");
+            Boost = Input.GetAxis("ShiftBoost") > 0;
 
         }
     }
