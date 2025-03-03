@@ -12,7 +12,7 @@ namespace Controllers
         public float Vertical {get; private set; }
         public bool Boost {get; private set; }
 
-        [SerializeField] private ShootingController shootingController;
+        [SerializeField] private WhiteHeroWeaponController weaponController;
 
 
 
@@ -22,7 +22,7 @@ namespace Controllers
             if (Input.GetButtonDown("Fire1"))
             {
                 Debug.Log("Fire1 button pressed");
-                shootingController.Shoot();
+                weaponController.Shoot();
             }
             
             Horizontal = Input.GetAxis("Horizontal");

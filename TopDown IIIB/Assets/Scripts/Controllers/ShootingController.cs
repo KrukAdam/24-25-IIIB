@@ -1,21 +1,24 @@
+using Data;
+using Data.SO;
 using UnityEngine;
 
 namespace Controllers
 {
     public class ShootingController : MonoBehaviour
     {
-        [SerializeField] private MissleController misslePrefab;
         [SerializeField] private Transform spawnPoint;
 
-        public void Shoot()
+        public void Shoot(Weapon Weapon)
         {
-            if (misslePrefab == null || spawnPoint == null)
+
+            MissleController prefab = Weapon.MisslePrefab;
+            if (prefab == null || spawnPoint == null)
             {
                 Debug.LogError("Spawn point or misslePrefab not set!");
                 return; 
             }
 
-            var missle = Instantiate(misslePrefab, spawnPoint.position, spawnPoint.rotation);
+            var missle = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
             missle.Init();
         }
     }

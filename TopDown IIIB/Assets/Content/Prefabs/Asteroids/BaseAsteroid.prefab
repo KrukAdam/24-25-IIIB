@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4437160022337576221}
   - component: {fileID: 8908087595281467943}
   m_Layer: 6
-  m_Name: 'BaseAsteroid '
+  m_Name: BaseAsteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8908087595281467943}
-  rotationSpeed: {x: 0, y: 0, z: 500}
+  rotationSpeed: {x: 0, y: 0, z: 111}
   force: 0.1
 --- !u!50 &8908087595281467943
 Rigidbody2D:

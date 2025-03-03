@@ -8,4 +8,12 @@ enum ReloadType
         Reload,
 
     }
+
+public enum WeaponType
+    {
+       Rocket,
+       Laser,
+    }
 }
+
+

@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 3430885796702595468}
   - component: {fileID: 8093877659337188503}
   - component: {fileID: 6440840397980631607}
+  - component: {fileID: 5374270673295543544}
   m_Layer: 7
   m_Name: WhiteHero
   m_TagString: Untagged
@@ -172,6 +173,7 @@ MonoBehaviour:
   rb: {fileID: 8093877659337188503}
   rotationSpeed: 5
   moveSpeed: 5
+  boostSpeed: 7
 --- !u!114 &3453316968904947571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf0fd3e9e11fb9488eeb452b57bc9ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingController: {fileID: 6440840397980631607}
+  weaponController: {fileID: 5374270673295543544}
 --- !u!58 &3430885796702595468
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -260,5 +262,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e42d0d6470eac48ae573ff1d916461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  misslePrefab: {fileID: 2065403675122506379, guid: 1a538fa6cf98cd547ad922b53d9e5ce6, type: 3}
   spawnPoint: {fileID: 4640473287989754663}
+--- !u!114 &5374270673295543544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9156086977242578756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e809158cf2ed14395cc79d1ca55648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingController: {fileID: 6440840397980631607}
+  weaponSo: {fileID: 11400000, guid: 2ed7f4e5d839da44099a7bd6d2433d24, type: 2}
+  weaponType: 0
