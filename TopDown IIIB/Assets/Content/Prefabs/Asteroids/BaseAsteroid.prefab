@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 214798630319585796}
   - component: {fileID: 4437160022337576221}
   - component: {fileID: 8908087595281467943}
+  - component: {fileID: 1300563234026132163}
   m_Layer: 6
   m_Name: BaseAsteroid
   m_TagString: Untagged
@@ -177,7 +178,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -192,3 +193,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1300563234026132163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4499448019561917046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb37ed25949f85543ae9d3fc863140c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 3

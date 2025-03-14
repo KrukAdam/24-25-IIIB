@@ -29,7 +29,7 @@ namespace Controllers
             }
 
             // Kierunek to lokalny "przód" obiektu (transform.right w 2D)
-            Vector2 direction = transform.right;
+            Vector2 direction = transform.up;
 
             // Ustaw rotacjê, jeœli to konieczne
             transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);

@@ -22,28 +22,29 @@ namespace Controllers
 
         private void Rotate()
         {
-
-            // Pobierz pozycjê kursora na ekranie
+            // Pobierz pozycjê kursora i ustaw odpowiedni¹ wartoœæ Z (odleg³oœæ od kamery)
             Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
 
-            // Przekszta³æ pozycjê kursora z ekranu na œwiat
+            // Przekszta³æ pozycjê kursora na wspó³rzêdne œwiata
             Vector3 targetPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-            // Ustaw wysokoœæ (Z) obiektu zgodnie z jego aktualn¹ pozycj¹, aby dzia³a³o w przestrzeni 2D
             targetPosition.z = transform.position.z;
 
-            // Oblicz kierunek do kursora
+            // Oblicz kierunek od obiektu do kursora
             Vector3 direction = targetPosition - transform.position;
 
-            // Oblicz k¹t obrotu w przestrzeni 2D
+            // Oblicz k¹t w stopniach, gdzie 0° wskazuje w prawo
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            // Zrotuj obiekt w kierunku kursora
-            Quaternion targetRotation = Quaternion.Euler(new Vector3(transform.rotation.x, transform.rotation.y, angle));
+            // Skoryguj k¹t o 90 stopni, aby przód (góra) pasowa³ do kierunku kursora
+            angle -= 90f;
+
+            // Ustaw obrót obiektu tylko w osi Z
+            Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-
         }
+
+
 
 
 
